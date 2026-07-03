@@ -40,7 +40,7 @@
       header { text-align: center; margin-bottom: clamp(40px, 7vw, 64px); }
       .eyebrow {
         font-family: var(--ui); font-size: 12.5px; font-weight: 700;
-        letter-spacing: 0.18em; text-transform: uppercase; color: var(--faint); margin-bottom: 18px;
+        letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px;
       }
       h1 {
         font-family: var(--serif); font-weight: 500; font-size: clamp(32px, 6.5vw, 52px);
@@ -70,19 +70,18 @@
       a.card.big { padding: 24px; gap: 10px; }
       a.card:hover {
         transform: translateY(-3px);
-        border-color: color-mix(in oklab, var(--c, #8a93d8) 55%, var(--line));
+        border-color: color-mix(in oklab, var(--c, var(--accent)) 55%, var(--line));
         background: var(--surface2);
       }
-      a.card:focus-visible { outline: 2px solid var(--c, #8a93d8); outline-offset: 3px; }
+      a.card:focus-visible { outline: 2px solid var(--c, var(--accent)); outline-offset: 3px; }
       .ct { display: flex; align-items: center; gap: 11px; }
       .dot {
         width: 30px; height: 30px; border-radius: 9px; flex-shrink: 0; display: grid;
-        place-items: center; font-size: 16px; background: color-mix(in oklab, var(--c, #8a93d8) 20%, transparent);
+        place-items: center; font-size: 16px; background: color-mix(in oklab, var(--c, var(--accent)) 20%, transparent);
       }
       a.card.big .dot { width: 40px; height: 40px; border-radius: 12px; font-size: 21px; }
       .name { font-family: var(--serif); font-weight: 600; font-size: 18px; color: var(--ink); letter-spacing: -0.01em; }
       a.card.big .name { font-size: 21px; }
-      .meta { margin-left: auto; font-size: 12px; color: var(--faint); font-weight: 600; }
       .chip {
         margin-left: auto; font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
         color: var(--faint); border: 1px solid var(--line); border-radius: 999px; padding: 3px 9px;
@@ -94,6 +93,7 @@
       footer a:hover { color: var(--ink); }
       @media (prefers-reduced-motion: reduce) { a.card { transition: none; } }
     </style>
+    <style>:root { --accent: #5fbf9b; }</style>
   </head>
   <body>
     <div class="wrap">
@@ -119,21 +119,21 @@
       <div class="group">
         <div class="group-h"><h2>Collections</h2><span>families of small things</span></div>
         <div class="grid big">
+        <a class="card big" style="--c:#3fa6c8" href="https://edriso.github.io/telegram-projects/" target="_blank" rel="noopener">
+          <div class="ct"><span class="dot" style="color:#3fa6c8">📨</span><span class="name">Telegram Projects</span></div>
+          <div class="desc">A family of free Telegram channels and bots, in Arabic and English.</div>
+        </a>
         <a class="card big" style="--c:#7c8bf5" href="https://edriso.github.io/tiny-apps/" target="_blank" rel="noopener">
-          <div class="ct"><span class="dot" style="color:#7c8bf5">🌿</span><span class="name">Tiny Apps</span><span class="meta">23 apps</span></div>
+          <div class="ct"><span class="dot" style="color:#7c8bf5">🌿</span><span class="name">Tiny Apps</span></div>
           <div class="desc">Small, single-purpose apps that each fix one modern friction, gently and without shame.</div>
         </a>
         <a class="card big" style="--c:#ecb24c" href="https://edriso.github.io/dev-guides/" target="_blank" rel="noopener">
-          <div class="ct"><span class="dot" style="color:#ecb24c">📘</span><span class="name">Dev Guides</span><span class="meta">16 guides</span></div>
+          <div class="ct"><span class="dot" style="color:#ecb24c">📘</span><span class="name">Dev Guides</span></div>
           <div class="desc">Hands-on guides, dojos, and references for web developers.</div>
         </a>
         <a class="card big" style="--c:#f6a35c" href="https://edriso.github.io/apps/" target="_blank" rel="noopener">
-          <div class="ct"><span class="dot" style="color:#f6a35c">🚀</span><span class="name">Apps &amp;amp; Demos</span><span class="meta">9 apps</span></div>
+          <div class="ct"><span class="dot" style="color:#f6a35c">🚀</span><span class="name">Apps &amp; Demos</span></div>
           <div class="desc">Standalone web apps and demos, each one live in the browser.</div>
-        </a>
-        <a class="card big" style="--c:#3fa6c8" href="https://edriso.github.io/telegram-projects/" target="_blank" rel="noopener">
-          <div class="ct"><span class="dot" style="color:#3fa6c8">📨</span><span class="name">Telegram Projects</span><span class="meta">9 bots</span></div>
-          <div class="desc">A family of free Telegram channels and bots, in Arabic and English.</div>
         </a>
         </div>
       </div>
